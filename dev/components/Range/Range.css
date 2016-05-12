@@ -1,0 +1,175 @@
+.plum-range {
+  padding: 3px 0;  
+}
+
+.plum-range--disabled {
+  opacity: .4;
+}
+
+.plum-range__button[disabled] {
+  opacity: 1;
+}
+
+.plum-range__input.plum-range__input[disabled] {
+  opacity: 1;
+}
+
+.plum-range__value-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.plum-range--stepper .plum-range__value-container {
+  justify-content: flex-start;
+}
+
+.plum-range__label {
+  color: #ffffff;
+  font-size: .75rem;
+  margin: 1px 3px;
+}
+
+.plum-range--stepper .plum-range__label:empty {
+  display: none;
+}
+
+.plum-range__input-container {
+  display: inline-flex;
+  align-items: stretch;
+}
+
+.plum-range__button {
+  width: 20px;
+  height: 20px;
+  text-align: center;
+}
+
+.plum-range__input.plum-range__input {
+  border-right: none;
+  border-radius: 2px 0 0 2px;
+  font-size: .75rem;
+  text-align: right;
+}
+
+.plum-range__units {
+  margin: 1px 0;
+  padding: 0 2px;
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid #282828;
+  border-left: none;
+  border-radius: 0 2px 2px 0;
+  background-color: #3A3A3A;
+  box-shadow: inset 0 -2px 2px -2px rgba(0, 0, 0, .2),
+              inset 0 2px 2px -2px rgba(0, 0, 0, .2),
+              0 1px 0 rgba(255, 255, 255, .2);
+  font-size: .75rem;
+  color: #ffffff;
+}
+
+/* slider */
+
+.plum-range__slider {
+  -webkit-appearance: none;
+  margin: 3px 0;
+  font-size: 1rem;
+  padding: 3px;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: transparent;
+}
+
+.plum-range__slider:focus {
+  outline: none;
+}
+
+.plum-range__slider::-webkit-slider-runnable-track {
+  margin: 5px 3px;
+  height: 5px;
+  border: 1px solid #282828;
+  border-radius: 2px;
+  background-color: #3A3A3A;
+  color: transparent;
+  box-shadow: inset 0 -2px 2px -2px rgba(255, 255, 255, .2),
+              inset 0 2px 2px -2px rgba(0, 0, 0, .2),
+              0 1px 0 rgba(255, 255, 255, .2);
+}
+
+/*moz and ms pseudo range elements somehow draws pixels bigger that chrome*/
+/*so the size of range input in chrome is slightly bigger*/
+
+.plum-range__slider::-moz-range-track {
+  /*applying margin to moz-range-track does absolutely nothing*/
+  /*margin: 5px 3px;*/
+  height: 3px;
+  border: 1px solid #282828;
+  border-radius: 2px;
+  background-color: #3A3A3A;
+  color: transparent;
+  box-shadow: inset 0 -2px 2px -2px rgba(255, 255, 255, .2),
+              inset 0 2px 2px -2px rgba(0, 0, 0, .2),
+              0 1px 0 rgba(255, 255, 255, .2);
+}
+
+.plum-range__slider::-ms-track {
+  margin: 7px 3px;
+  height: 3px;
+  border: 1px solid #282828;
+  border-radius: 2px;
+  background-color: #3A3A3A;
+  color: transparent;
+  box-shadow: inset 0 -2px 2px -2px rgba(255, 255, 255, .2),
+              inset 0 2px 2px -2px rgba(0, 0, 0, .2),
+              0 1px 0 rgba(255, 255, 255, .2);
+}
+
+.plum-range__slider::-ms-fill-lower {
+  background: none;
+}
+
+.plum-range__slider::-ms-fill-upper {
+  background: none;
+}
+
+.plum-range__slider::-webkit-slider-thumb {
+  border: none;
+  width: 12px;
+  height: 12px;
+  background-color: #282828;
+  background-image: linear-gradient(-135deg, #c7c7c7, #6f6f6f);
+  transform: rotate(-45deg);
+  border: 1px solid #282828;
+  border-radius: 2px;
+  box-shadow: 0 0 2px 1px rgba(0, 0, 0, .2);
+  
+  /*chrome specific thumb styles*/
+  -webkit-appearance: none;
+  margin-top: -4.5px;
+}
+
+.plum-range__slider::-moz-range-thumb {
+  border: none;
+  width: 10px;
+  height: 10px;
+  background-color: #282828;
+  background-image: linear-gradient(-135deg, #c7c7c7, #6f6f6f);
+  transform: rotate(-45deg);
+  border: 1px solid #282828;
+  border-radius: 2px;
+  box-shadow: 0 0 2px 1px rgba(0, 0, 0, .2);
+}
+
+.plum-range__slider::-ms-thumb {
+  margin: 2px;
+  
+  border: none;
+  width: 10px;
+  height: 10px;
+  background-color: #282828;
+  background-image: linear-gradient(-135deg, #c7c7c7, #6f6f6f);
+  transform: rotate(-45deg);
+  border: 1px solid #282828;
+  border-radius: 2px;
+  box-shadow: 0 0 2px 1px rgba(0, 0, 0, .1);
+}

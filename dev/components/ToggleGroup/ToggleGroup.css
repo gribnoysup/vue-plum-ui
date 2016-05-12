@@ -1,0 +1,7 @@
+.plum-toggle-group__toggle {
+  display: inline-block;
+}
+
+.plum-toggle-group__input {
+  display: none;
+}

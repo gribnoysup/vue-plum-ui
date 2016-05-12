@@ -1,0 +1,47 @@
+<div v-bind:class="windowClasses"
+     tabindex="0"
+     
+     v-on:focus="active = true"
+     v-on:blur="active = false"
+     
+     v-draggable
+     handle=".plum-window__header"
+     v-bind:drag-disabled="!draggable"
+     v-bind:drag-axis="dragAxis"
+     
+     v-resizable
+     v-bind:res-disabled="!resizable"
+     v-bind:res-axis="resAxis">
+  
+  <div class="plum-window__header">
+    <slot name="header"></slot>
+    <div class="plum-window__button-container">
+      <plum-button class="plum-window__button plum-button--no-padding"
+                   v-on:mousedown.stop.prevent
+                   v-on:click="toggleHidden"
+                   group="first">
+        <plum-icon v-bind:icon="hiddenIcon"></plum-icon>
+      </plum-button>
+      <plum-button class="plum-window__button plum-button--no-padding"
+                   v-on:mousedown.stop.prevent
+                   v-on:click="fullscreen = !fullscreen"
+                   v-bind:disabled="hidden"
+                   group>
+        <plum-icon v-bind:icon="fullscreenIcon"></plum-icon>
+      </plum-button>
+      <plum-button class="plum-window__button plum-button--no-padding"
+                   group="last"
+                   v-on:mousedown.stop.prevent
+                   v-on:click="close">
+        <plum-icon icon="ic_close_white_24px"></plum-icon>
+      </plum-button>
+    </div>
+  </div>
+  
+  <div class="plum-window__content">
+    <slot name="content"></slot>
+  </div>
+  
+  <div class="plum-window__footer"><slot name="footer"></slot></div>
+  
+</div>

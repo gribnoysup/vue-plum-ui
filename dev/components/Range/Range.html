@@ -1,0 +1,55 @@
+<div class="plum-range" 
+     v-bind:class="rangeClasses">
+
+  <div class="plum-range__value-container"
+       v-bind:class="containerClasses">
+    
+    <div class="plum-range__label"><slot></slot></div>
+  
+    <div class="plum-range__input-container">
+    
+      <plum-button class="plum-range__button plum-button--no-padding" 
+                   v-if="type == 'stepper'"
+                   v-bind:disabled="disabled"
+                   v-on:click="decrease">
+        <plum-icon icon="ic_remove_white_24px"></plum-icon>
+      </plum-button>
+    
+      <plum-input class="plum-range__input"
+                  type="text"
+                  v-model="value"
+                  v-bind:style="{ width : inputWidth + 'ch' }"
+                  v-on:change="checkInput"
+                  v-bind:min="min"
+                  v-bind:max="max"
+                  v-bind:disabled="disabled"
+                  number>
+      </plum-input>
+      
+      <label class="plum-range__units"
+             v-text="unit"></label>
+    
+      <plum-button class="plum-range__button plum-button--no-padding"
+                   v-if="type == 'stepper'"
+                   v-bind:disabled="disabled"
+                   v-on:click="increase">
+        <plum-icon icon="ic_add_white_24px"></plum-icon>
+      </plum-button>
+    
+    </div>
+    
+  </div>
+    
+  <div class="plum-range__slider-container" v-if="type == 'slider'">
+  
+    <input type="range" 
+           class="plum-range__slider"
+           v-bind:min="min"
+           v-bind:max="max"
+           v-bind:step="step"
+           v-bind:disabled="disabled"
+           v-model="value">
+         
+  </div>
+
+</div>

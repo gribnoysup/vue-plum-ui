@@ -1,0 +1,43 @@
+.plum-file-select__label {
+  vertical-align: middle;
+}
+
+.plum-file-select__input {
+  display: none;
+}
+
+.plum-file-select__dragzone {
+  width: 100%;
+  height: 100%;
+  background-color: #393939;
+  color: #ffffff;
+  border-radius: 3px;
+  opacity: .3;
+  transition: opacity .1s;
+}
+
+.plum-file-select__dragzone.plum-dropbox--dragover {
+  opacity: .6;
+  transition: opacity .1s;
+}
+
+.plum-file-select__dragzone-slot {
+  min-width: 150px;
+  min-height: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.plum-file-select__dragzone-label {
+  font-weight: 700;
+  max-width: 120px;
+  white-space: nowrap;
+  overflow: hidden;
+  font-size: 12px;
+}
+
+.plum-file-select__dragzone-icon {
+  font-size: 48px;
+}

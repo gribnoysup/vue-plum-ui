@@ -1,0 +1,21 @@
+<div class="plum-scroller">
+  <div class="plum-scroller__content" 
+       v-bind:style="contentStyle"
+       v-el:scroller-content><slot></slot></div>
+  <div class="plum-scroller__track plum-scroller__track--vertical"
+       v-bind:class="verticalScrollClass"
+       v-el:vertical-track>
+    <div class="plum-scroller__thumb plum-scroller__thumb--vertical"
+         v-bind:style="verticalThumbStyles"
+         v-on:click.stop.prevent
+         v-el:vertical-thumb></div>
+  </div>
+  <div class="plum-scroller__track plum-scroller__track--horizontal"
+       v-bind:class="horisontalScrollClass"
+       v-el:horizontal-track>
+    <div class="plum-scroller__thumb plum-scroller__thumb--horizontal"
+         v-bind:style="horizontalThumbStyles"
+         v-on:click.stop.prevent
+         v-el:horizontal-thumb></div>
+  </div>
+</div>

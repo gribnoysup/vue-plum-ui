@@ -1,0 +1,29 @@
+<div class="plum-file-select">
+  <template v-if="dropbox">
+    <div class="plum-file-select__dragzone" 
+         v-dropbox="files">
+      <slot>
+        <div class="plum-file-select__dragzone-slot">
+          <plum-icon class="plum-file-select__dragzone-icon" 
+                     icon="ic_file_download_white_24px"></plum-icon>
+          <span class="plum-file-select__dragzone-label" 
+                v-text="filename || placeholder"></span>
+        </div>
+      </slot>
+    </div>
+  </template>
+  <template v-else>
+    <input type="file" 
+           v-el:file-input
+           v-bind:multiple="multiple" 
+           v-bind:accept="accept" 
+           v-on:change="fileEvent" 
+           class="plum-file-select__input">
+    <plum-button class="plum-file-select__button" 
+               v-on:click="simClick">
+    <slot>Choose file</slot>
+    </plum-button>
+    <span class="plum-file-select__label" 
+          v-text="filename || placeholder"></span>
+  </template>
+</div>

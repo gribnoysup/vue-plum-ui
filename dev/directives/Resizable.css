@@ -1,0 +1,38 @@
+.plum-resizable__hitbox {
+  position: absolute;
+}
+
+.plum-resizable--disabled .plum-resizable__hitbox {
+  display: none;
+}
+
+.plum-resizable__hitbox--hidden {
+  display: none;
+}
+
+.plum-resizable__hitbox--right {
+  top: 0;
+  right: -2px;
+  width: 4px;
+  height: 100%;
+  cursor: ew-resize;
+  z-index: 1;
+}
+
+.plum-resizable__hitbox--bottom {
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 4px;
+  cursor: ns-resize;
+  z-index: 2;
+}
+
+.plum-resizable__hitbox--corner {
+  bottom: -3px;
+  right: -3px;
+  width: 6px;
+  height: 6px;
+  cursor: nwse-resize;
+  z-index: 3;
+}

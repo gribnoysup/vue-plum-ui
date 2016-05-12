@@ -1,0 +1,72 @@
+<table class="plum-table">
+  
+  <caption class="plum-table__caption"><slot></slot></caption>
+  
+  <colgroup>
+    <col v-for="header of parsedHeaders" 
+         class="plum-table__col" 
+         v-bind:style="{ width : header.width }">
+  </colgroup>
+  
+  <thead class="plum-table__header">
+    <tr class="plum-table__row plum-table__row--header">
+      <th class="plum-table__cell plum-table__cell--header"
+          v-bind:class="header.active ? 'plum-table__cell--active' : ''"
+          v-for="header of parsedHeaders"
+          v-on:click="changeSort(header)">
+        <div class="plum-table__cell-header-content"
+             v-bind:class="'plum-table__cell-header-content--' + header.type">
+          <span class="plum-table__cell-header-label"
+                v-text="header.label || header.key">
+          </span>
+          <plum-icon class="plum-table__icon plum-table__icon--sortable"
+                     v-show="header.active"
+                     v-bind:icon="header.sort == 1 ? 'ic_arrow_upward_white_24px' : 'ic_arrow_downward_white_24px'">
+          </plum-icon>
+        </div>
+      </th>
+    </tr>
+  </thead>
+  
+  <tbody class="plum-table__body">
+    <tr class="plum-table__row plum-table__row--body"
+        v-for="value of filteredValues">
+      <td class="plum-table__cell plum-table__cell--body"
+          v-bind:class="'plum-table__cell--' + header.type"
+          v-for="header of parsedHeaders">
+        <!--<input type="text" -->
+        <!--       class="plum-table__cell-input"-->
+        <!--       v-if="header.editable"-->
+        <!--       v-model="value[header.key]" />-->
+        <span class="plum-table__cell-value"
+              v-text="value[header.key]">
+        </span>
+      </td>
+    </tr>
+  </tbody>
+  
+  <tfoot class="plum-table__footer"
+         v-if="pagination > 0">
+    <tr class="plum-table__row plum-table__row--footer">
+      <td class="plum-table__cell plum-table__cell--footer"
+          v-bind:colspan="parsedHeaders.length">
+        <div class="plum-table__pagination-controls">
+          <span class="plum-table__pagination-label"
+                v-text="paginationLabel">
+          </span>
+          <plum-button class="plum-table__button plum-button--no-padding"
+                       v-on:click="currStep--"
+                       v-bind:disabled="currStep == 1">
+            <plum-icon icon="ic_keyboard_arrow_left_white_24px"></plum-icon>
+          </plum-button>
+          <plum-button class="plum-table__button plum-button--no-padding"
+                       v-on:click="currStep++"
+                       v-bind:disabled="currStep == maxSteps">
+            <plum-icon icon="ic_keyboard_arrow_right_white_24px"></plum-icon>
+          </plum-button>
+        </div>
+      </td>
+    </tr>
+  </tfoot>
+
+</table>

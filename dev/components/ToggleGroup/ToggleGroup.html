@@ -1,0 +1,18 @@
+<div class="plum-toggle-group">
+  
+  <div class="plum-toggle-group__toggle" v-for="value of values">
+    <input class="plum-toggle-group__input" 
+           v-bind:value="value.value"
+           v-model="selected"
+           v-bind:name="name"
+           v-bind:type="type"/>
+    <plum-button class="plum-toggle-group__button"
+                 v-bind:disabled="value.disabled"
+                 v-bind:toggled="selected.indexOf(value.value) !== -1"
+                 v-on:click="simClick"
+                 v-bind:group="groupPosition($index)">
+    {{{ value.label || value.value }}}
+    </plum-button>
+  </div>
+  
+</div>
