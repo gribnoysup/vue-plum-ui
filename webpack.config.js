@@ -7,6 +7,9 @@ module.exports = {
     path: path.join(__dirname, 'build'),
     publicPath : '/build/',
     filename: 'plum.min.js',
+    library : 'Plum',
+    libraryTarget : 'umd',
+    umdNamedDefine : true
   },
   module: {
     loaders: [
