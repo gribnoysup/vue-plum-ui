@@ -5,9 +5,9 @@ export default {
   paramWatchers : {
     dragDisabled (val) {
       if (val) {
-        utils.dom.removeClass(this.el, 'plum-draggable--disabled');
-      } else {
         utils.dom.addClass(this.el, 'plum-draggable--disabled');
+      } else {
+        utils.dom.removeClass(this.el, 'plum-draggable--disabled');
       }
     }
   },
@@ -68,6 +68,14 @@ export default {
     
     let top = parseInt(this.params.top, 10) || 0;
     let left = parseInt(this.params.left, 10) || 0;
+    
+    if (typeof this.params.dragAxis === 'undefined') {
+      this.params.dragAxis = 'xy';
+    }
+    
+    if (typeof this.params.dragDisabled === 'undefined') {
+      this.params.dragDisabled = false;
+    }
 
     this.bounds = null;
     
@@ -94,9 +102,7 @@ export default {
 
       if (this.params.container) {
         this.containerEl = utils.dom.closest(this.el, this.params.container);
-        
-        console.log(this.containerEl);
-        
+
         if (this.containerEl !== null) {
           this.bounds = getBounds(this.containerEl, this.el);
         }
