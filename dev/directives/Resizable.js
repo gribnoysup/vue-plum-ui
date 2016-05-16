@@ -89,6 +89,12 @@ export default {
       });
     };
     
+    this.elStyle = getComputedStyle(this.el);
+    
+    if (this.elStyle.position != 'relative' && this.elStyle.position != 'absolute') {
+      this.el.style.position = 'relative';
+    }
+    
     if (typeof this.params.resAxis === 'undefined') {
       this.params.resAxis = 'xy';
     }
@@ -102,7 +108,6 @@ export default {
     } else {
       utils.dom.removeClass(this.el, 'plum-resizable--disabled');
     }
-    
     
     utils.dom.each(this.hitboxes, (el, idx) => {
       
