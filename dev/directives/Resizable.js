@@ -89,11 +89,20 @@ export default {
       });
     };
     
+    if (typeof this.params.resAxis === 'undefined') {
+      this.params.resAxis = 'xy';
+    }
+    
+    if (typeof this.params.resDisabled === 'undefined') {
+      this.params.resDisabled = false;
+    }
+    
     if (this.params.resDisabled) {
       utils.dom.addClass(this.el, 'plum-resizable--disabled');
     } else {
       utils.dom.removeClass(this.el, 'plum-resizable--disabled');
     }
+    
     
     utils.dom.each(this.hitboxes, (el, idx) => {
       
