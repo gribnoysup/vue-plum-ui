@@ -8,9 +8,6 @@ export default {
       type : Number,
       default : -Infinity
     },
-    label : {
-      type : String
-    },
     disabled : {
       type : Boolean,
       default : false
