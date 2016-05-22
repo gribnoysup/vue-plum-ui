@@ -7,7 +7,13 @@
     "dev": "webpack-dev-server --port $PORT --host $IP --inline --hot",
     "build": "rm -rf ./build/* & cross-env NODE_ENV=production webpack --progress --hide-modules"
   },
-  "keywords": ["vuejs", "vue", "components", "directives", "ui"],
+  "keywords": [
+    "vuejs",
+    "vue",
+    "components",
+    "directives",
+    "ui"
+  ],
   "author": "Sergey Petushkov <petushkov.sergey@gmail.com>",
   "license": "MIT",
   "devDependencies": {
@@ -30,7 +36,5 @@
     "webpack": "^1.13.0",
     "webpack-dev-server": "^1.14.1"
   },
-  "dependencies": {
-    "vue": "^1.0.24"
-  }
+  "dependencies": {}
 }
