@@ -15,7 +15,7 @@ module.exports = {
     loaders: [
       {
         test: /\.font\.(js|json)$/,
-        loader: 'style!css!fontgen?fileName=[fontname][ext]'
+        loader: 'style!css!fontgen?embed&fileName=[fontname][ext]'
       },
       {
         test: /\.vue$/,
