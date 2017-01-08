@@ -1,1 +1,545 @@
-<!DOCTYPE html><html> <head> <title>Plum UI docs and demo</title> <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/> <meta name="viewport" content="width=device-width, initial-scale=1"> <link rel="stylesheet" href="/vue-plum-ui/index.css" type="text/css"/> </head> <body> <a class="github-ribbon" href="//github.com/gribnoysup/vue-plum-ui"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/652c5b9acfaddf3a9c326fa6bde407b87f7be0f4/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6f72616e67655f6666373630302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_orange_ff7600.png"></a> <div class="toolbar"> <button class="toolbar__button"><i class="icon nav-icon"></i></button> </div><div class="overlay"></div><div class="main"> <div class="navigation"> <ul class="navigation__list"> <li class="navigation__list-elem"> <a data-scroll class="navigation__list-anchor navigation__list-anchor--level-1" href="#">Plum UI</a> </li><li class="navigation__list-elem"> <a data-scroll class="navigation__list-anchor navigation__list-anchor--level-2" href="#what-is-plum-ui">What is Plum UI</a> </li><li class="navigation__list-elem"> <a data-scroll class="navigation__list-anchor navigation__list-anchor--level-2" href="#components">Components</a> </li><li class="navigation__list-elem"> <a data-scroll class="navigation__list-anchor navigation__list-anchor--level-3" href="#plminput">PlmInput</a> </li><li class="navigation__list-elem"> <a data-scroll class="navigation__list-anchor navigation__list-anchor--level-4" href="#plminput-example">Example</a> </li><li class="navigation__list-elem"> <a data-scroll class="navigation__list-anchor navigation__list-anchor--level-3" href="#plmicon">PlmIcon</a> </li><li class="navigation__list-elem"> <a data-scroll class="navigation__list-anchor navigation__list-anchor--level-4" href="#plmicon-props">Props</a> </li><li class="navigation__list-elem"> <a data-scroll class="navigation__list-anchor navigation__list-anchor--level-4" href="#plmicon-example">Example</a> </li><li class="navigation__list-elem"> <a data-scroll class="navigation__list-anchor navigation__list-anchor--level-3" href="#plmbutton">PlmButton</a> </li><li class="navigation__list-elem"> <a data-scroll class="navigation__list-anchor navigation__list-anchor--level-4" href="#plmbutton-props">Props</a> </li><li class="navigation__list-elem"> <a data-scroll class="navigation__list-anchor navigation__list-anchor--level-4" href="#plmbutton-example">Example</a> </li><li class="navigation__list-elem"> <a data-scroll class="navigation__list-anchor navigation__list-anchor--level-3" href="#plmtogglegroup">PlmToggleGroup</a> </li><li class="navigation__list-elem"> <a data-scroll class="navigation__list-anchor navigation__list-anchor--level-4" href="#plmtogglegroup-props">Props</a> </li><li class="navigation__list-elem"> <a data-scroll class="navigation__list-anchor navigation__list-anchor--level-4" href="#plmtogglegroup-example">Example</a> </li><li class="navigation__list-elem"> <a data-scroll class="navigation__list-anchor navigation__list-anchor--level-3" href="#plmrange">PlmRange</a> </li><li class="navigation__list-elem"> <a data-scroll class="navigation__list-anchor navigation__list-anchor--level-4" href="#plmrange-props">Props</a> </li><li class="navigation__list-elem"> <a data-scroll class="navigation__list-anchor navigation__list-anchor--level-4" href="#plmrange-example">Example</a> </li><li class="navigation__list-elem"> <a data-scroll class="navigation__list-anchor navigation__list-anchor--level-3" href="#plmfileselect">PlmFileSelect</a> </li><li class="navigation__list-elem"> <a data-scroll class="navigation__list-anchor navigation__list-anchor--level-4" href="#plmfileselect-props">Props</a> </li><li class="navigation__list-elem"> <a data-scroll class="navigation__list-anchor navigation__list-anchor--level-4" href="#plmfileselect-events">Events</a> </li><li class="navigation__list-elem"> <a data-scroll class="navigation__list-anchor navigation__list-anchor--level-4" href="#plmfileselect-example">Example</a> </li><li class="navigation__list-elem"> <a data-scroll class="navigation__list-anchor navigation__list-anchor--level-3" href="#plmtable">PlmTable</a> </li><li class="navigation__list-elem"> <a data-scroll class="navigation__list-anchor navigation__list-anchor--level-4" href="#plmtable-props">Props</a> </li><li class="navigation__list-elem"> <a data-scroll class="navigation__list-anchor navigation__list-anchor--level-4" href="#plmtable-example">Example</a> </li><li class="navigation__list-elem"> <a data-scroll class="navigation__list-anchor navigation__list-anchor--level-3" href="#plmscroller">PlmScroller</a> </li><li class="navigation__list-elem"> <a data-scroll class="navigation__list-anchor navigation__list-anchor--level-4" href="#plmscroller-example">Example</a> </li><li class="navigation__list-elem"> <a data-scroll class="navigation__list-anchor navigation__list-anchor--level-3" href="#plmwindow">PlmWindow</a> </li><li class="navigation__list-elem"> <a data-scroll class="navigation__list-anchor navigation__list-anchor--level-4" href="#plmwindow-props">Props</a> </li><li class="navigation__list-elem"> <a data-scroll class="navigation__list-anchor navigation__list-anchor--level-4" href="#plmwindow-events">Events</a> </li><li class="navigation__list-elem"> <a data-scroll class="navigation__list-anchor navigation__list-anchor--level-4" href="#plmwindow-example">Example</a> </li><li class="navigation__list-elem"> <a data-scroll class="navigation__list-anchor navigation__list-anchor--level-2" href="#directives">Directives</a> </li><li class="navigation__list-elem"> <a data-scroll class="navigation__list-anchor navigation__list-anchor--level-3" href="#plmdraggable">PlmDraggable</a> </li><li class="navigation__list-elem"> <a data-scroll class="navigation__list-anchor navigation__list-anchor--level-4" href="#plmdraggable-params">Params</a> </li><li class="navigation__list-elem"> <a data-scroll class="navigation__list-anchor navigation__list-anchor--level-4" href="#plmdraggable-example">Example</a> </li><li class="navigation__list-elem"> <a data-scroll class="navigation__list-anchor navigation__list-anchor--level-3" href="#plmresizable">PlmResizable</a> </li><li class="navigation__list-elem"> <a data-scroll class="navigation__list-anchor navigation__list-anchor--level-4" href="#plmresizable-params">Params</a> </li><li class="navigation__list-elem"> <a data-scroll class="navigation__list-anchor navigation__list-anchor--level-4" href="#plmresizable-example">Example</a> </li><li class="navigation__list-elem"> <a data-scroll class="navigation__list-anchor navigation__list-anchor--level-3" href="#plmdropbox">PlmDropbox</a> </li><li class="navigation__list-elem"> <a data-scroll class="navigation__list-anchor navigation__list-anchor--level-4" href="#plmdropbox-example">Example</a> </li></ul> </div><div class="documentation markdown-body"> <h1 class="documentation__header"><a data-scroll id="" class="documentation__anchor" href="#">§</a><span class="documentation__header-label">Plum UI</span></h1><h2 class="documentation__header"><a data-scroll id="what-is-plum-ui" class="documentation__anchor" href="#what-is-plum-ui">§</a><span class="documentation__header-label">What is Plum UI</span></h2><p>Plum UI is a set of desktop oriented components and directivesfor <a href="https://vuejs.org/">Vue.js</a>. I made them for fun, practice and most of all to make my dev life alittle easier. These elements are the ones that I used most of all while making varoius web tools and prototypes at work and I kinda like this adobe style for UI, so I figured why not make a new component library out of it.</p><h2 class="documentation__header"><a data-scroll id="components" class="documentation__anchor" href="#components">§</a><span class="documentation__header-label">Components</span></h2><h3 class="documentation__header"><a data-scroll id="plminput" class="documentation__anchor" href="#plminput">§</a><span class="documentation__header-label">PlmInput</span></h3><p><code>&lt;plm-input&gt;</code> is just a stylized input element with no specific behaviour.</p><h4 class="documentation__header"><a data-scroll id="plminput-example" class="documentation__anchor" href="#plminput-example">#</a><span class="documentation__header-label">Example</span></h4><p data-height="180" data-theme-id="light" data-slug-hash="LNvMwR" data-default-tab="result" data-user="gribnoysup" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/gribnoysup/pen/LNvMwR/">PlmInput</a> by Sergey (<a href="http://codepen.io/gribnoysup">@gribnoysup</a>) on <a href="http://codepen.io">CodePen</a>.</p><h3 class="documentation__header"><a data-scroll id="plmicon" class="documentation__anchor" href="#plmicon">§</a><span class="documentation__header-label">PlmIcon</span></h3><p>Plum UI comes with a set of default icons that are used in other components. Icons are stored in <code>dev/assets/icons</code> and webpack is already configured to make a font out of them. So feel free to add your own icons to the set.</p><p><code>&lt;plm-icon&gt;</code> element used to place them in templates.</p><h4 class="documentation__header"><a data-scroll id="plmicon-props" class="documentation__anchor" href="#plmicon-props">#</a><span class="documentation__header-label">Props</span></h4><table><thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead><tbody><tr><td><code>icon</code></td><td><code>String</code></td><td>Icon name</td></tr></tbody></table><h4 class="documentation__header"><a data-scroll id="plmicon-example" class="documentation__anchor" href="#plmicon-example">#</a><span class="documentation__header-label">Example</span></h4><p data-height="180" data-theme-id="light" data-slug-hash="zqXeOG" data-default-tab="result" data-user="gribnoysup" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/gribnoysup/pen/zqXeOG/">PlmIcon</a> by Sergey (<a href="http://codepen.io/gribnoysup">@gribnoysup</a>) on <a href="http://codepen.io">CodePen</a>.</p><h3 class="documentation__header"><a data-scroll id="plmbutton" class="documentation__anchor" href="#plmbutton">§</a><span class="documentation__header-label">PlmButton</span></h3><p><code>&lt;plm-button&gt;</code> is a styled button with standart behaviour with two additional props.</p><h4 class="documentation__header"><a data-scroll id="plmbutton-props" class="documentation__anchor" href="#plmbutton-props">#</a><span class="documentation__header-label">Props</span></h4><table><thead><tr><th>Name</th><th>Type</th><th>Values</th><th>Description</th></tr></thead><tbody><tr><td><code>toggled</code></td><td><code>Boolean</code></td><td></td><td>Adds additional styling to button to make it look toggled depending on the value</td></tr><tr><td><code>group</code></td><td><code>String</code></td><td><code>&#39;first&#39;, &#39;last&#39;, &#39;&#39;</code></td><td>Adds additional styling to buttons to make them look like a group</td></tr></tbody></table><h4 class="documentation__header"><a data-scroll id="plmbutton-example" class="documentation__anchor" href="#plmbutton-example">#</a><span class="documentation__header-label">Example</span></h4><p data-height="265" data-theme-id="light" data-slug-hash="YqMZpq" data-default-tab="result" data-user="gribnoysup" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/gribnoysup/pen/YqMZpq/">PlmButton</a> by Sergey (<a href="http://codepen.io/gribnoysup">@gribnoysup</a>) on <a href="http://codepen.io">CodePen</a>.</p><h3 class="documentation__header"><a data-scroll id="plmtogglegroup" class="documentation__anchor" href="#plmtogglegroup">§</a><span class="documentation__header-label">PlmToggleGroup</span></h3><p><code>&lt;plm-toggle-group&gt;</code> is a radio or checkbox-like inputs, rendered with buttons as toggle elements</p><h4 class="documentation__header"><a data-scroll id="plmtogglegroup-props" class="documentation__anchor" href="#plmtogglegroup-props">#</a><span class="documentation__header-label">Props</span></h4><table><thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead><tbody><tr><td><code>values</code></td><td><code>Array&lt;Object&gt;</code></td><td>Array of toggle values: <code>{value, &lt;label&gt;, &lt;disabled&gt;}</code></td></tr><tr><td><code>selected</code></td><td><code>String</code> or <code>Array</code></td><td>Selected value</td></tr><tr><td><code>multiple</code></td><td><code>Boolean</code></td><td>Checkbox or radio behaviour</td></tr><tr><td><code>group</code></td><td><code>Boolean</code></td><td>Adds additional styling to toggles to make them look like a group</td></tr></tbody></table><h4 class="documentation__header"><a data-scroll id="plmtogglegroup-example" class="documentation__anchor" href="#plmtogglegroup-example">#</a><span class="documentation__header-label">Example</span></h4><p data-height="265" data-theme-id="light" data-slug-hash="LNvMMN" data-default-tab="result" data-user="gribnoysup" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/gribnoysup/pen/LNvMMN/">PlmToggleGroup</a> by Sergey (<a href="http://codepen.io/gribnoysup">@gribnoysup</a>) on <a href="http://codepen.io">CodePen</a>.</p><h3 class="documentation__header"><a data-scroll id="plmrange" class="documentation__anchor" href="#plmrange">§</a><span class="documentation__header-label">PlmRange</span></h3><p><code>&lt;plm-range&gt;</code> is a range selector that comes in two forms: stepper or slider. Label for the input could be provided with unnamed <code>&lt;slot&gt;</code> inside element.</p><h4 class="documentation__header"><a data-scroll id="plmrange-props" class="documentation__anchor" href="#plmrange-props">#</a><span class="documentation__header-label">Props</span></h4><table><thead><tr><th>Name</th><th>Type</th><th>Values</th><th>Description</th></tr></thead><tbody><tr><td><code>min</code></td><td><code>Number</code></td><td></td><td>Minimum value</td></tr><tr><td><code>max</code></td><td><code>Number</code></td><td></td><td>Maximum value</td></tr><tr><td><code>type</code></td><td><code>String</code></td><td><code>&#39;stepper&#39;, &#39;slider&#39;</code></td><td>Range type</td></tr><tr><td><code>step</code></td><td><code>Number</code></td><td></td><td>Range step</td></tr><tr><td><code>unit</code></td><td><code>String</code></td><td></td><td>Unit label</td></tr><tr><td><code>value</code></td><td><code>Number</code></td><td></td><td>Input value</td></tr></tbody></table><h4 class="documentation__header"><a data-scroll id="plmrange-example" class="documentation__anchor" href="#plmrange-example">#</a><span class="documentation__header-label">Example</span></h4><p data-height="385" data-theme-id="light" data-slug-hash="bpJQyq" data-default-tab="result" data-user="gribnoysup" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/gribnoysup/pen/bpJQyq/">PlmRange</a> by Sergey (<a href="http://codepen.io/gribnoysup">@gribnoysup</a>) on <a href="http://codepen.io">CodePen</a>.</p><h3 class="documentation__header"><a data-scroll id="plmfileselect" class="documentation__anchor" href="#plmfileselect">§</a><span class="documentation__header-label">PlmFileSelect</span></h3><p><code>&lt;plm-file-select&gt;</code> is a replacement of the default <code>input[type=&quot;file&quot;]</code> element and additional support of drag and drop mode.</p><h4 class="documentation__header"><a data-scroll id="plmfileselect-props" class="documentation__anchor" href="#plmfileselect-props">#</a><span class="documentation__header-label">Props</span></h4><table><thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead><tbody><tr><td><code>dropbox</code></td><td><code>Boolean</code></td><td>Enable drag and drop mode</td></tr></tbody></table><h4 class="documentation__header"><a data-scroll id="plmfileselect-events" class="documentation__anchor" href="#plmfileselect-events">#</a><span class="documentation__header-label">Events</span></h4><table><thead><tr><th>Name</th><th>Description</th></tr></thead><tbody><tr><td><code>file-change</code></td><td>Event emitted when file in the input changes</td></tr></tbody></table><h4 class="documentation__header"><a data-scroll id="plmfileselect-example" class="documentation__anchor" href="#plmfileselect-example">#</a><span class="documentation__header-label">Example</span></h4><p data-height="340" data-theme-id="light" data-slug-hash="jqRXNa" data-default-tab="result" data-user="gribnoysup" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/gribnoysup/pen/jqRXNa/">PlmFileSelect</a> by Sergey (<a href="http://codepen.io/gribnoysup">@gribnoysup</a>) on <a href="http://codepen.io">CodePen</a>.</p><h3 class="documentation__header"><a data-scroll id="plmtable" class="documentation__anchor" href="#plmtable">§</a><span class="documentation__header-label">PlmTable</span></h3><p><code>&lt;plm-table&gt;</code> allows you to easily display a set of tabular data with optional pagination. Table columns could be represented with simple strings or an objectto provide additional configuration.</p><h4 class="documentation__header"><a data-scroll id="plmtable-props" class="documentation__anchor" href="#plmtable-props">#</a><span class="documentation__header-label">Props</span></h4><table><thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead><tbody><tr><td><code>headers</code></td><td><code>Array&lt;String&gt;</code> or <code>Array&lt;Object&gt;</code></td><td>An array of headers. Could be just key names or an object <code>{key, &lt;label&gt;, &lt;width&gt;}</code></td></tr><tr><td><code>values</code></td><td><code>Array&lt;RowValues&gt;</code></td><td>Array of displayed values. Keys must correspond to ones, provided in <code>headers</code> prop</td></tr><tr><td><code>pagination</code></td><td><code>Number</code></td><td>Optional pagination value</td></tr></tbody></table><h4 class="documentation__header"><a data-scroll id="plmtable-example" class="documentation__anchor" href="#plmtable-example">#</a><span class="documentation__header-label">Example</span></h4><p data-height="1000" data-theme-id="light" data-slug-hash="GZLPXE" data-default-tab="result" data-user="gribnoysup" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/gribnoysup/pen/GZLPXE/">PlmTable</a> by Sergey (<a href="http://codepen.io/gribnoysup">@gribnoysup</a>) on <a href="http://codepen.io">CodePen</a>.</p><h3 class="documentation__header"><a data-scroll id="plmscroller" class="documentation__anchor" href="#plmscroller">§</a><span class="documentation__header-label">PlmScroller</span></h3><p><code>&lt;plm-scroller&gt;</code> provides a scrollable container with stylable scroll tracks and thumbs</p><h4 class="documentation__header"><a data-scroll id="plmscroller-example" class="documentation__anchor" href="#plmscroller-example">#</a><span class="documentation__header-label">Example</span></h4><p data-height="895" data-theme-id="light" data-slug-hash="wGZRjp" data-default-tab="result" data-user="gribnoysup" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/gribnoysup/pen/wGZRjp/">PlmScroller</a> by Sergey (<a href="http://codepen.io/gribnoysup">@gribnoysup</a>) on <a href="http://codepen.io">CodePen</a>.</p><h3 class="documentation__header"><a data-scroll id="plmwindow" class="documentation__anchor" href="#plmwindow">§</a><span class="documentation__header-label">PlmWindow</span></h3><p><code>&lt;plm-window&gt;</code> is a window component with three slots avaliable:</p><ul><li><code>content</code> - main content of the window</li><li><code>header</code> - window header</li><li><code>footer</code> - window footer</li></ul><p>Window could be minimized and go fullscreen. By default window is draggable and resizable, but this could be changed with additional props.</p><h4 class="documentation__header"><a data-scroll id="plmwindow-props" class="documentation__anchor" href="#plmwindow-props">#</a><span class="documentation__header-label">Props</span></h4><table><thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead><tbody><tr><td><code>draggable</code></td><td><code>Boolean</code></td><td>Allows window to be draggable</td></tr><tr><td><code>resizable</code></td><td><code>Boolean</code></td><td>Allows window to be resizable</td></tr></tbody></table><h4 class="documentation__header"><a data-scroll id="plmwindow-events" class="documentation__anchor" href="#plmwindow-events">#</a><span class="documentation__header-label">Events</span></h4><table><thead><tr><th>Name</th><th>Description</th></tr></thead><tbody><tr><td><code>close</code></td><td>Event emitted when close button is clicked</td></tr></tbody></table><h4 class="documentation__header"><a data-scroll id="plmwindow-example" class="documentation__anchor" href="#plmwindow-example">#</a><span class="documentation__header-label">Example</span></h4><p data-height="720" data-theme-id="light" data-slug-hash="NNmeez" data-default-tab="result" data-user="gribnoysup" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/gribnoysup/pen/NNmeez/">PlmWindow</a> by Sergey (<a href="http://codepen.io/gribnoysup">@gribnoysup</a>) on <a href="http://codepen.io">CodePen</a>.</p><h2 class="documentation__header"><a data-scroll id="directives" class="documentation__anchor" href="#directives">§</a><span class="documentation__header-label">Directives</span></h2><h3 class="documentation__header"><a data-scroll id="plmdraggable" class="documentation__anchor" href="#plmdraggable">§</a><span class="documentation__header-label">PlmDraggable</span></h3><p><code>v-plm-draggable</code> directive makes element draggable, additional configuration avaliablewith params</p><h4 class="documentation__header"><a data-scroll id="plmdraggable-params" class="documentation__anchor" href="#plmdraggable-params">#</a><span class="documentation__header-label">Params</span></h4><table><thead><tr><th>Name</th><th>Type</th><th>Values</th><th>Description</th></tr></thead><tbody><tr><td><code>top</code></td><td><code>Number</code></td><td></td><td>Initial <code>top</code> position of the element</td></tr><tr><td><code>left</code></td><td><code>Number</code></td><td></td><td>Initial <code>left</code> position of the element</td></tr><tr><td><code>container</code></td><td><code>String</code></td><td></td><td>DOM query selector for element, that draggable element won&#39;t be able to leave</td></tr><tr><td><code>handle</code></td><td><code>String</code></td><td></td><td>DOM query selector for element, that will activate dragging</td></tr><tr><td><code>dragAxis</code></td><td><code>String</code></td><td><code>&#39;x&#39;, &#39;y&#39;, &#39;xy&#39;</code></td><td>Active drag axis for the element, if not provided defaults to <code>&#39;xy&#39;</code></td></tr><tr><td><code>dragDisabled</code></td><td><code>Boolean</code></td><td></td><td>Disable dragging</td></tr></tbody></table><h4 class="documentation__header"><a data-scroll id="plmdraggable-example" class="documentation__anchor" href="#plmdraggable-example">#</a><span class="documentation__header-label">Example</span></h4><p data-height="651" data-theme-id="light" data-slug-hash="KzLdmg" data-default-tab="result" data-user="gribnoysup" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/gribnoysup/pen/KzLdmg/">PlmDraggable</a> by Sergey (<a href="http://codepen.io/gribnoysup">@gribnoysup</a>) on <a href="http://codepen.io">CodePen</a>.</p><h3 class="documentation__header"><a data-scroll id="plmresizable" class="documentation__anchor" href="#plmresizable">§</a><span class="documentation__header-label">PlmResizable</span></h3><p><code>v-plm-resizable</code> directive makes element resizable, additional configuration avaliablewith params</p><h4 class="documentation__header"><a data-scroll id="plmresizable-params" class="documentation__anchor" href="#plmresizable-params">#</a><span class="documentation__header-label">Params</span></h4><table><thead><tr><th>Name</th><th>Type</th><th>Values</th><th>Description</th></tr></thead><tbody><tr><td><code>width</code></td><td><code>Number</code></td><td></td><td>Initial <code>width</code> of the element</td></tr><tr><td><code>height</code></td><td><code>Number</code></td><td></td><td>Initial <code>height</code> of the element</td></tr><tr><td><code>resAxis</code></td><td><code>String</code></td><td><code>&#39;x&#39;, &#39;y&#39;, &#39;xy&#39;</code></td><td>Active resize axis for the element, if not provided defaults to <code>&#39;xy&#39;</code></td></tr><tr><td><code>resDisabled</code></td><td><code>Boolean</code></td><td></td><td>Disable resizing</td></tr></tbody></table><h4 class="documentation__header"><a data-scroll id="plmresizable-example" class="documentation__anchor" href="#plmresizable-example">#</a><span class="documentation__header-label">Example</span></h4><p data-height="352" data-theme-id="light" data-slug-hash="xVNwNm" data-default-tab="result" data-user="gribnoysup" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/gribnoysup/pen/xVNwNm/">PlmResizable</a> by Sergey (<a href="http://codepen.io/gribnoysup">@gribnoysup</a>) on <a href="http://codepen.io">CodePen</a>.</p><h3 class="documentation__header"><a data-scroll id="plmdropbox" class="documentation__anchor" href="#plmdropbox">§</a><span class="documentation__header-label">PlmDropbox</span></h3><p><code>v-plm-dropbox</code> directive allows you to drop files on the element. No events firedon drop, but directive supports <code>twoWay</code> to set data on the passed value. Right now only supports files.</p><h4 class="documentation__header"><a data-scroll id="plmdropbox-example" class="documentation__anchor" href="#plmdropbox-example">#</a><span class="documentation__header-label">Example</span></h4><p data-height="239" data-theme-id="light" data-slug-hash="regmre" data-default-tab="result" data-user="gribnoysup" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/gribnoysup/pen/regmre/">PlmDropbox</a> by Sergey (<a href="http://codepen.io/gribnoysup">@gribnoysup</a>) on <a href="http://codepen.io">CodePen</a>.</p></div></div><script type="text/javascript" src="/vue-plum-ui/index.js"></script> <script async src="//assets.codepen.io/assets/embed/ei.js"></script> </body></html>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Plum UI docs and demo</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link rel="stylesheet" href="index.css" type="text/css" />
+  </head>
+  <body>
+    
+    <a class="github-ribbon" href="//github.com/gribnoysup/vue-plum-ui"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/652c5b9acfaddf3a9c326fa6bde407b87f7be0f4/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6f72616e67655f6666373630302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_orange_ff7600.png"></a>
+    
+    <div class="toolbar">
+      <button class="toolbar__button"><i class="icon nav-icon"></i></button>
+    </div>
+    
+    <div class="overlay"></div>
+    
+    <div class="main">
+      
+      <div class="navigation">
+        <ul class="navigation__list">
+          
+          <li class="navigation__list-elem">
+            <a data-scroll class="navigation__list-anchor navigation__list-anchor--level-1" href="#">Plum UI</a>
+          </li>
+          
+          <li class="navigation__list-elem">
+            <a data-scroll class="navigation__list-anchor navigation__list-anchor--level-2" href="#what-is-plum-ui">What is Plum UI</a>
+          </li>
+          
+          <li class="navigation__list-elem">
+            <a data-scroll class="navigation__list-anchor navigation__list-anchor--level-2" href="#components">Components</a>
+          </li>
+          
+          <li class="navigation__list-elem">
+            <a data-scroll class="navigation__list-anchor navigation__list-anchor--level-3" href="#plminput">PlmInput</a>
+          </li>
+          
+          <li class="navigation__list-elem">
+            <a data-scroll class="navigation__list-anchor navigation__list-anchor--level-4" href="#plminput-example">Example</a>
+          </li>
+          
+          <li class="navigation__list-elem">
+            <a data-scroll class="navigation__list-anchor navigation__list-anchor--level-3" href="#plmicon">PlmIcon</a>
+          </li>
+          
+          <li class="navigation__list-elem">
+            <a data-scroll class="navigation__list-anchor navigation__list-anchor--level-4" href="#plmicon-props">Props</a>
+          </li>
+          
+          <li class="navigation__list-elem">
+            <a data-scroll class="navigation__list-anchor navigation__list-anchor--level-4" href="#plmicon-example">Example</a>
+          </li>
+          
+          <li class="navigation__list-elem">
+            <a data-scroll class="navigation__list-anchor navigation__list-anchor--level-3" href="#plmbutton">PlmButton</a>
+          </li>
+          
+          <li class="navigation__list-elem">
+            <a data-scroll class="navigation__list-anchor navigation__list-anchor--level-4" href="#plmbutton-props">Props</a>
+          </li>
+          
+          <li class="navigation__list-elem">
+            <a data-scroll class="navigation__list-anchor navigation__list-anchor--level-4" href="#plmbutton-example">Example</a>
+          </li>
+          
+          <li class="navigation__list-elem">
+            <a data-scroll class="navigation__list-anchor navigation__list-anchor--level-3" href="#plmtogglegroup">PlmToggleGroup</a>
+          </li>
+          
+          <li class="navigation__list-elem">
+            <a data-scroll class="navigation__list-anchor navigation__list-anchor--level-4" href="#plmtogglegroup-props">Props</a>
+          </li>
+          
+          <li class="navigation__list-elem">
+            <a data-scroll class="navigation__list-anchor navigation__list-anchor--level-4" href="#plmtogglegroup-example">Example</a>
+          </li>
+          
+          <li class="navigation__list-elem">
+            <a data-scroll class="navigation__list-anchor navigation__list-anchor--level-3" href="#plmrange">PlmRange</a>
+          </li>
+          
+          <li class="navigation__list-elem">
+            <a data-scroll class="navigation__list-anchor navigation__list-anchor--level-4" href="#plmrange-props">Props</a>
+          </li>
+          
+          <li class="navigation__list-elem">
+            <a data-scroll class="navigation__list-anchor navigation__list-anchor--level-4" href="#plmrange-example">Example</a>
+          </li>
+          
+          <li class="navigation__list-elem">
+            <a data-scroll class="navigation__list-anchor navigation__list-anchor--level-3" href="#plmfileselect">PlmFileSelect</a>
+          </li>
+          
+          <li class="navigation__list-elem">
+            <a data-scroll class="navigation__list-anchor navigation__list-anchor--level-4" href="#plmfileselect-props">Props</a>
+          </li>
+          
+          <li class="navigation__list-elem">
+            <a data-scroll class="navigation__list-anchor navigation__list-anchor--level-4" href="#plmfileselect-events">Events</a>
+          </li>
+          
+          <li class="navigation__list-elem">
+            <a data-scroll class="navigation__list-anchor navigation__list-anchor--level-4" href="#plmfileselect-example">Example</a>
+          </li>
+          
+          <li class="navigation__list-elem">
+            <a data-scroll class="navigation__list-anchor navigation__list-anchor--level-3" href="#plmtable">PlmTable</a>
+          </li>
+          
+          <li class="navigation__list-elem">
+            <a data-scroll class="navigation__list-anchor navigation__list-anchor--level-4" href="#plmtable-props">Props</a>
+          </li>
+          
+          <li class="navigation__list-elem">
+            <a data-scroll class="navigation__list-anchor navigation__list-anchor--level-4" href="#plmtable-example">Example</a>
+          </li>
+          
+          <li class="navigation__list-elem">
+            <a data-scroll class="navigation__list-anchor navigation__list-anchor--level-3" href="#plmscroller">PlmScroller</a>
+          </li>
+          
+          <li class="navigation__list-elem">
+            <a data-scroll class="navigation__list-anchor navigation__list-anchor--level-4" href="#plmscroller-example">Example</a>
+          </li>
+          
+          <li class="navigation__list-elem">
+            <a data-scroll class="navigation__list-anchor navigation__list-anchor--level-3" href="#plmwindow">PlmWindow</a>
+          </li>
+          
+          <li class="navigation__list-elem">
+            <a data-scroll class="navigation__list-anchor navigation__list-anchor--level-4" href="#plmwindow-props">Props</a>
+          </li>
+          
+          <li class="navigation__list-elem">
+            <a data-scroll class="navigation__list-anchor navigation__list-anchor--level-4" href="#plmwindow-events">Events</a>
+          </li>
+          
+          <li class="navigation__list-elem">
+            <a data-scroll class="navigation__list-anchor navigation__list-anchor--level-4" href="#plmwindow-example">Example</a>
+          </li>
+          
+          <li class="navigation__list-elem">
+            <a data-scroll class="navigation__list-anchor navigation__list-anchor--level-2" href="#directives">Directives</a>
+          </li>
+          
+          <li class="navigation__list-elem">
+            <a data-scroll class="navigation__list-anchor navigation__list-anchor--level-3" href="#plmdraggable">PlmDraggable</a>
+          </li>
+          
+          <li class="navigation__list-elem">
+            <a data-scroll class="navigation__list-anchor navigation__list-anchor--level-4" href="#plmdraggable-params">Params</a>
+          </li>
+          
+          <li class="navigation__list-elem">
+            <a data-scroll class="navigation__list-anchor navigation__list-anchor--level-4" href="#plmdraggable-example">Example</a>
+          </li>
+          
+          <li class="navigation__list-elem">
+            <a data-scroll class="navigation__list-anchor navigation__list-anchor--level-3" href="#plmresizable">PlmResizable</a>
+          </li>
+          
+          <li class="navigation__list-elem">
+            <a data-scroll class="navigation__list-anchor navigation__list-anchor--level-4" href="#plmresizable-params">Params</a>
+          </li>
+          
+          <li class="navigation__list-elem">
+            <a data-scroll class="navigation__list-anchor navigation__list-anchor--level-4" href="#plmresizable-example">Example</a>
+          </li>
+          
+          <li class="navigation__list-elem">
+            <a data-scroll class="navigation__list-anchor navigation__list-anchor--level-3" href="#plmdropbox">PlmDropbox</a>
+          </li>
+          
+          <li class="navigation__list-elem">
+            <a data-scroll class="navigation__list-anchor navigation__list-anchor--level-4" href="#plmdropbox-example">Example</a>
+          </li>
+          
+        </ul>
+      </div>
+      
+      <div class="documentation markdown-body">
+        <h1 class="documentation__header"><a data-scroll id="" class="documentation__anchor" href="#">§</a><span class="documentation__header-label">Plum UI</span></h1><h2 class="documentation__header"><a data-scroll id="what-is-plum-ui" class="documentation__anchor" href="#what-is-plum-ui">§</a><span class="documentation__header-label">What is Plum UI</span></h2><p>Plum UI is a set of desktop oriented components and directives
+for <a href="https://vuejs.org/">Vue.js</a>. I made them for fun, practice and most of all to make my dev life a
+little easier. These elements are the ones that I used most of all while making 
+varoius web tools and prototypes at work and I kinda like this adobe style for 
+UI, so I figured why not make a new component library out of it.</p>
+<h2 class="documentation__header"><a data-scroll id="components" class="documentation__anchor" href="#components">§</a><span class="documentation__header-label">Components</span></h2><h3 class="documentation__header"><a data-scroll id="plminput" class="documentation__anchor" href="#plminput">§</a><span class="documentation__header-label">PlmInput</span></h3><p><code>&lt;plm-input&gt;</code> is just a stylized input element with no specific behaviour.</p>
+<h4 class="documentation__header"><a data-scroll id="plminput-example" class="documentation__anchor" href="#plminput-example">#</a><span class="documentation__header-label">Example</span></h4><p data-height="180" data-theme-id="light" data-slug-hash="LNvMwR" data-default-tab="result" data-user="gribnoysup" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/gribnoysup/pen/LNvMwR/">PlmInput</a> by Sergey (<a href="http://codepen.io/gribnoysup">@gribnoysup</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+
+<h3 class="documentation__header"><a data-scroll id="plmicon" class="documentation__anchor" href="#plmicon">§</a><span class="documentation__header-label">PlmIcon</span></h3><p>Plum UI comes with a set of default icons that are used in other components. 
+Icons are stored in <code>dev/assets/icons</code> and webpack is already configured to make 
+a font out of them. So feel free to add your own icons to the set.</p>
+<p><code>&lt;plm-icon&gt;</code> element used to place them in templates.</p>
+<h4 class="documentation__header"><a data-scroll id="plmicon-props" class="documentation__anchor" href="#plmicon-props">#</a><span class="documentation__header-label">Props</span></h4><table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>icon</code></td>
+<td><code>String</code></td>
+<td>Icon name</td>
+</tr>
+</tbody>
+</table>
+<h4 class="documentation__header"><a data-scroll id="plmicon-example" class="documentation__anchor" href="#plmicon-example">#</a><span class="documentation__header-label">Example</span></h4><p data-height="180" data-theme-id="light" data-slug-hash="zqXeOG" data-default-tab="result" data-user="gribnoysup" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/gribnoysup/pen/zqXeOG/">PlmIcon</a> by Sergey (<a href="http://codepen.io/gribnoysup">@gribnoysup</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+
+<h3 class="documentation__header"><a data-scroll id="plmbutton" class="documentation__anchor" href="#plmbutton">§</a><span class="documentation__header-label">PlmButton</span></h3><p><code>&lt;plm-button&gt;</code> is a styled button with standart behaviour with two additional props.</p>
+<h4 class="documentation__header"><a data-scroll id="plmbutton-props" class="documentation__anchor" href="#plmbutton-props">#</a><span class="documentation__header-label">Props</span></h4><table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Values</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>toggled</code></td>
+<td><code>Boolean</code></td>
+<td></td>
+<td>Adds additional styling to button to make it look toggled depending on the value</td>
+</tr>
+<tr>
+<td><code>group</code></td>
+<td><code>String</code></td>
+<td><code>&#39;first&#39;, &#39;last&#39;, &#39;&#39;</code></td>
+<td>Adds additional styling to buttons to make them look like a group</td>
+</tr>
+</tbody>
+</table>
+<h4 class="documentation__header"><a data-scroll id="plmbutton-example" class="documentation__anchor" href="#plmbutton-example">#</a><span class="documentation__header-label">Example</span></h4><p data-height="265" data-theme-id="light" data-slug-hash="YqMZpq" data-default-tab="result" data-user="gribnoysup" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/gribnoysup/pen/YqMZpq/">PlmButton</a> by Sergey (<a href="http://codepen.io/gribnoysup">@gribnoysup</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+
+<h3 class="documentation__header"><a data-scroll id="plmtogglegroup" class="documentation__anchor" href="#plmtogglegroup">§</a><span class="documentation__header-label">PlmToggleGroup</span></h3><p><code>&lt;plm-toggle-group&gt;</code> is a radio or checkbox-like inputs, rendered with buttons as toggle elements</p>
+<h4 class="documentation__header"><a data-scroll id="plmtogglegroup-props" class="documentation__anchor" href="#plmtogglegroup-props">#</a><span class="documentation__header-label">Props</span></h4><table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>values</code></td>
+<td><code>Array&lt;Object&gt;</code></td>
+<td>Array of toggle values: <code>{ value, &lt;label&gt;, &lt;disabled&gt; }</code></td>
+</tr>
+<tr>
+<td><code>selected</code></td>
+<td><code>String</code> or <code>Array</code></td>
+<td>Selected value</td>
+</tr>
+<tr>
+<td><code>multiple</code></td>
+<td><code>Boolean</code></td>
+<td>Checkbox or radio behaviour</td>
+</tr>
+<tr>
+<td><code>group</code></td>
+<td><code>Boolean</code></td>
+<td>Adds additional styling to toggles to make them look like a group</td>
+</tr>
+</tbody>
+</table>
+<h4 class="documentation__header"><a data-scroll id="plmtogglegroup-example" class="documentation__anchor" href="#plmtogglegroup-example">#</a><span class="documentation__header-label">Example</span></h4><p data-height="265" data-theme-id="light" data-slug-hash="LNvMMN" data-default-tab="result" data-user="gribnoysup" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/gribnoysup/pen/LNvMMN/">PlmToggleGroup</a> by Sergey (<a href="http://codepen.io/gribnoysup">@gribnoysup</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+
+<h3 class="documentation__header"><a data-scroll id="plmrange" class="documentation__anchor" href="#plmrange">§</a><span class="documentation__header-label">PlmRange</span></h3><p><code>&lt;plm-range&gt;</code> is a range selector that comes in two forms: stepper or slider. 
+Label for the input could be provided with unnamed <code>&lt;slot&gt;</code> inside element.</p>
+<h4 class="documentation__header"><a data-scroll id="plmrange-props" class="documentation__anchor" href="#plmrange-props">#</a><span class="documentation__header-label">Props</span></h4><table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Values</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>min</code></td>
+<td><code>Number</code></td>
+<td></td>
+<td>Minimum value</td>
+</tr>
+<tr>
+<td><code>max</code></td>
+<td><code>Number</code></td>
+<td></td>
+<td>Maximum value</td>
+</tr>
+<tr>
+<td><code>type</code></td>
+<td><code>String</code></td>
+<td><code>&#39;stepper&#39;, &#39;slider&#39;</code></td>
+<td>Range type</td>
+</tr>
+<tr>
+<td><code>step</code></td>
+<td><code>Number</code></td>
+<td></td>
+<td>Range step</td>
+</tr>
+<tr>
+<td><code>unit</code></td>
+<td><code>String</code></td>
+<td></td>
+<td>Unit label</td>
+</tr>
+<tr>
+<td><code>value</code></td>
+<td><code>Number</code></td>
+<td></td>
+<td>Input value</td>
+</tr>
+</tbody>
+</table>
+<h4 class="documentation__header"><a data-scroll id="plmrange-example" class="documentation__anchor" href="#plmrange-example">#</a><span class="documentation__header-label">Example</span></h4><p data-height="385" data-theme-id="light" data-slug-hash="bpJQyq" data-default-tab="result" data-user="gribnoysup" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/gribnoysup/pen/bpJQyq/">PlmRange</a> by Sergey (<a href="http://codepen.io/gribnoysup">@gribnoysup</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+
+<h3 class="documentation__header"><a data-scroll id="plmfileselect" class="documentation__anchor" href="#plmfileselect">§</a><span class="documentation__header-label">PlmFileSelect</span></h3><p><code>&lt;plm-file-select&gt;</code> is a replacement of the default <code>input[type=&quot;file&quot;]</code> element 
+and additional support of drag and drop mode.</p>
+<h4 class="documentation__header"><a data-scroll id="plmfileselect-props" class="documentation__anchor" href="#plmfileselect-props">#</a><span class="documentation__header-label">Props</span></h4><table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>dropbox</code></td>
+<td><code>Boolean</code></td>
+<td>Enable drag and drop mode</td>
+</tr>
+</tbody>
+</table>
+<h4 class="documentation__header"><a data-scroll id="plmfileselect-events" class="documentation__anchor" href="#plmfileselect-events">#</a><span class="documentation__header-label">Events</span></h4><table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>file-change</code></td>
+<td>Event emitted when file in the input changes</td>
+</tr>
+</tbody>
+</table>
+<h4 class="documentation__header"><a data-scroll id="plmfileselect-example" class="documentation__anchor" href="#plmfileselect-example">#</a><span class="documentation__header-label">Example</span></h4><p data-height="340" data-theme-id="light" data-slug-hash="jqRXNa" data-default-tab="result" data-user="gribnoysup" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/gribnoysup/pen/jqRXNa/">PlmFileSelect</a> by Sergey (<a href="http://codepen.io/gribnoysup">@gribnoysup</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+
+<h3 class="documentation__header"><a data-scroll id="plmtable" class="documentation__anchor" href="#plmtable">§</a><span class="documentation__header-label">PlmTable</span></h3><p><code>&lt;plm-table&gt;</code> allows you to easily display a set of tabular data with optional 
+pagination. Table columns could be represented with simple strings or an object
+to provide additional configuration.</p>
+<h4 class="documentation__header"><a data-scroll id="plmtable-props" class="documentation__anchor" href="#plmtable-props">#</a><span class="documentation__header-label">Props</span></h4><table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>headers</code></td>
+<td><code>Array&lt;String&gt;</code> or <code>Array&lt;Object&gt;</code></td>
+<td>An array of headers. Could be just key names or an object <code>{ key, &lt;label&gt;, &lt;width&gt; }</code></td>
+</tr>
+<tr>
+<td><code>values</code></td>
+<td><code>Array&lt;RowValues&gt;</code></td>
+<td>Array of displayed values. Keys must correspond to ones, provided in <code>headers</code> prop</td>
+</tr>
+<tr>
+<td><code>pagination</code></td>
+<td><code>Number</code></td>
+<td>Optional pagination value</td>
+</tr>
+</tbody>
+</table>
+<h4 class="documentation__header"><a data-scroll id="plmtable-example" class="documentation__anchor" href="#plmtable-example">#</a><span class="documentation__header-label">Example</span></h4><p data-height="1000" data-theme-id="light" data-slug-hash="GZLPXE" data-default-tab="result" data-user="gribnoysup" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/gribnoysup/pen/GZLPXE/">PlmTable</a> by Sergey (<a href="http://codepen.io/gribnoysup">@gribnoysup</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+
+<h3 class="documentation__header"><a data-scroll id="plmscroller" class="documentation__anchor" href="#plmscroller">§</a><span class="documentation__header-label">PlmScroller</span></h3><p><code>&lt;plm-scroller&gt;</code> provides a scrollable container with stylable scroll tracks and thumbs</p>
+<h4 class="documentation__header"><a data-scroll id="plmscroller-example" class="documentation__anchor" href="#plmscroller-example">#</a><span class="documentation__header-label">Example</span></h4><p data-height="895" data-theme-id="light" data-slug-hash="wGZRjp" data-default-tab="result" data-user="gribnoysup" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/gribnoysup/pen/wGZRjp/">PlmScroller</a> by Sergey (<a href="http://codepen.io/gribnoysup">@gribnoysup</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+
+<h3 class="documentation__header"><a data-scroll id="plmwindow" class="documentation__anchor" href="#plmwindow">§</a><span class="documentation__header-label">PlmWindow</span></h3><p><code>&lt;plm-window&gt;</code> is a window component with three slots avaliable:</p>
+<ul>
+<li><code>content</code> - main content of the window</li>
+<li><code>header</code> - window header</li>
+<li><code>footer</code> - window footer</li>
+</ul>
+<p>Window could be minimized and go fullscreen. By default window is draggable and resizable, but this could be changed 
+with additional props.</p>
+<h4 class="documentation__header"><a data-scroll id="plmwindow-props" class="documentation__anchor" href="#plmwindow-props">#</a><span class="documentation__header-label">Props</span></h4><table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>draggable</code></td>
+<td><code>Boolean</code></td>
+<td>Allows window to be draggable</td>
+</tr>
+<tr>
+<td><code>resizable</code></td>
+<td><code>Boolean</code></td>
+<td>Allows window to be resizable</td>
+</tr>
+</tbody>
+</table>
+<h4 class="documentation__header"><a data-scroll id="plmwindow-events" class="documentation__anchor" href="#plmwindow-events">#</a><span class="documentation__header-label">Events</span></h4><table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>close</code></td>
+<td>Event emitted when close button is clicked</td>
+</tr>
+</tbody>
+</table>
+<h4 class="documentation__header"><a data-scroll id="plmwindow-example" class="documentation__anchor" href="#plmwindow-example">#</a><span class="documentation__header-label">Example</span></h4><p data-height="720" data-theme-id="light" data-slug-hash="NNmeez" data-default-tab="result" data-user="gribnoysup" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/gribnoysup/pen/NNmeez/">PlmWindow</a> by Sergey (<a href="http://codepen.io/gribnoysup">@gribnoysup</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+
+<h2 class="documentation__header"><a data-scroll id="directives" class="documentation__anchor" href="#directives">§</a><span class="documentation__header-label">Directives</span></h2><h3 class="documentation__header"><a data-scroll id="plmdraggable" class="documentation__anchor" href="#plmdraggable">§</a><span class="documentation__header-label">PlmDraggable</span></h3><p><code>v-plm-draggable</code> directive makes element draggable, additional configuration avaliable
+with params</p>
+<h4 class="documentation__header"><a data-scroll id="plmdraggable-params" class="documentation__anchor" href="#plmdraggable-params">#</a><span class="documentation__header-label">Params</span></h4><table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Values</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>top</code></td>
+<td><code>Number</code></td>
+<td></td>
+<td>Initial <code>top</code> position of the element</td>
+</tr>
+<tr>
+<td><code>left</code></td>
+<td><code>Number</code></td>
+<td></td>
+<td>Initial <code>left</code> position of the element</td>
+</tr>
+<tr>
+<td><code>container</code></td>
+<td><code>String</code></td>
+<td></td>
+<td>DOM query selector for element, that draggable element won&#39;t be able to leave</td>
+</tr>
+<tr>
+<td><code>handle</code></td>
+<td><code>String</code></td>
+<td></td>
+<td>DOM query selector for element, that will activate dragging</td>
+</tr>
+<tr>
+<td><code>dragAxis</code></td>
+<td><code>String</code></td>
+<td><code>&#39;x&#39;, &#39;y&#39;, &#39;xy&#39;</code></td>
+<td>Active drag axis for the element, if not provided defaults to <code>&#39;xy&#39;</code></td>
+</tr>
+<tr>
+<td><code>dragDisabled</code></td>
+<td><code>Boolean</code></td>
+<td></td>
+<td>Disable dragging</td>
+</tr>
+</tbody>
+</table>
+<h4 class="documentation__header"><a data-scroll id="plmdraggable-example" class="documentation__anchor" href="#plmdraggable-example">#</a><span class="documentation__header-label">Example</span></h4><p data-height="651" data-theme-id="light" data-slug-hash="KzLdmg" data-default-tab="result" data-user="gribnoysup" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/gribnoysup/pen/KzLdmg/">PlmDraggable</a> by Sergey (<a href="http://codepen.io/gribnoysup">@gribnoysup</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+
+<h3 class="documentation__header"><a data-scroll id="plmresizable" class="documentation__anchor" href="#plmresizable">§</a><span class="documentation__header-label">PlmResizable</span></h3><p><code>v-plm-resizable</code> directive makes element resizable, additional configuration avaliable
+with params</p>
+<h4 class="documentation__header"><a data-scroll id="plmresizable-params" class="documentation__anchor" href="#plmresizable-params">#</a><span class="documentation__header-label">Params</span></h4><table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Values</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>width</code></td>
+<td><code>Number</code></td>
+<td></td>
+<td>Initial <code>width</code> of the element</td>
+</tr>
+<tr>
+<td><code>height</code></td>
+<td><code>Number</code></td>
+<td></td>
+<td>Initial <code>height</code> of the element</td>
+</tr>
+<tr>
+<td><code>resAxis</code></td>
+<td><code>String</code></td>
+<td><code>&#39;x&#39;, &#39;y&#39;, &#39;xy&#39;</code></td>
+<td>Active resize axis for the element, if not provided defaults to <code>&#39;xy&#39;</code></td>
+</tr>
+<tr>
+<td><code>resDisabled</code></td>
+<td><code>Boolean</code></td>
+<td></td>
+<td>Disable resizing</td>
+</tr>
+</tbody>
+</table>
+<h4 class="documentation__header"><a data-scroll id="plmresizable-example" class="documentation__anchor" href="#plmresizable-example">#</a><span class="documentation__header-label">Example</span></h4><p data-height="352" data-theme-id="light" data-slug-hash="xVNwNm" data-default-tab="result" data-user="gribnoysup" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/gribnoysup/pen/xVNwNm/">PlmResizable</a> by Sergey (<a href="http://codepen.io/gribnoysup">@gribnoysup</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+
+<h3 class="documentation__header"><a data-scroll id="plmdropbox" class="documentation__anchor" href="#plmdropbox">§</a><span class="documentation__header-label">PlmDropbox</span></h3><p><code>v-plm-dropbox</code> directive allows you to drop files on the element. No events fired
+on drop, but directive supports <code>twoWay</code> to set data on the passed value. Right now only 
+supports files.</p>
+<h4 class="documentation__header"><a data-scroll id="plmdropbox-example" class="documentation__anchor" href="#plmdropbox-example">#</a><span class="documentation__header-label">Example</span></h4><p data-height="239" data-theme-id="light" data-slug-hash="regmre" data-default-tab="result" data-user="gribnoysup" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/gribnoysup/pen/regmre/">PlmDropbox</a> by Sergey (<a href="http://codepen.io/gribnoysup">@gribnoysup</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+
+      </div>
+      
+    </div>
+    
+    <script type="text/javascript" src="index.js"></script>
+    <script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+  </body>
+</html>
